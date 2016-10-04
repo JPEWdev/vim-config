@@ -50,6 +50,7 @@ set laststatus=2    "Always show status line
 let g:airline#extensions#tabline#enabled = 1 " Show buffer list in airline
 let g:airline_powerline_fonts = 1 " Use Powerline fonts
 let g:airline_theme = 'dark' " Use the default airline theme. I like it better than solarized
+let g:airline_detect_spell = 0 " Disable detection of spell status
 
 map <F3> <ESC>n
 imap <F3> <ESC>ni
@@ -166,7 +167,7 @@ autocmd BufWritePre *.java,*.pl,*.pm,*.c,*.h,*.cpp,*.hpp,*.xml,*.fml,*.py,*.x,*.
 au BufNewFile,BufRead wscript* set filetype=python
 
 " Enable spellcheck
-function CodeSpellCheck()
+function! CodeSpellCheck()
     exe ":syntax spell toplevel"
     if has('win32') || has('win64')
         exe ":setlocal spellfile=" . $HOME . "/vimfiles/spell/code.latin1.add"
