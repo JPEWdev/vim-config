@@ -1,0 +1,12 @@
+#*********************************************************************
+#
+#   MODULE NAME:
+#       [NAME] - %c[title]
+#
+#   DESCRIPTION:
+#       [module description]
+#
+# Copyright 2012 by Garmin Ltd. or its subsidiaries.
+#********************************************************************/
+
+
