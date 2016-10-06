@@ -83,6 +83,10 @@ if has('gui_running')
   set guioptions-=T "remove toolbar
   set guioptions-=m "remove menu bar
 endif
+
+" <leader>a in normal mode searches for the word under the cursor
+nmap <Leader>a :Ack! -k <C-R><C-W>
+
 "-----------------------------------------------------------
 " ALT + j/k will move lines up and down
 "-----------------------------------------------------------
@@ -149,6 +153,13 @@ else
   set autoindent		" always set autoindenting on
 
 endif " has("autocmd")
+
+
+augroup qf
+    autocmd!
+    " Don't list the quickfix or location window in the buffer list
+    autocmd FileType qf set nobuflisted
+augroup END
 
 " Disable audible bell and screen flashing bell
 set noerrorbells visualbell t_vb=
