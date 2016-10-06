@@ -1,5 +1,6 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 
+let g:pathogen_disabled = ["vim-gitgutter"]
 execute pathogen#infect()
 
 " Use Vim settings, rather then Vi settings (much better!).
