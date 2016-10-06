@@ -45,6 +45,8 @@ set hidden
 
 set encoding=utf8   " Display files as UTF-8
 
+set updatetime=500  " Update more frequently ms too keep git gutter snappy
+let g:gitgutter_sign_column_always = 1 " Always show sign column
 
 set laststatus=2    "Always show status line
 let g:airline#extensions#tabline#enabled = 1 " Show buffer list in airline
