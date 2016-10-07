@@ -85,7 +85,7 @@ if has('gui_running')
 endif
 
 " <leader>a in normal mode searches for the word under the cursor
-nmap <Leader>a :Ack! -k <C-R><C-W>
+nmap <expr> <leader>a GetFindAck('FindAck!', expand("<cword>"))
 
 "-----------------------------------------------------------
 " ALT + j/k will move lines up and down
