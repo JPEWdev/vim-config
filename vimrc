@@ -44,6 +44,11 @@ set shiftround      " Round shift operators '>' and '<' to a multiple of shiftwi
 set showtabline=2
 set hidden
 
+set wildmenu        " Show the completion menu
+set wildmode=longest:full,full  " On the first Tab, complete to the longest string,
+                                " then show match list. On the next tab, match
+                                " complete the next match
+
 set encoding=utf8   " Display files as UTF-8
 
 set updatetime=500  " Update more frequently ms too keep git gutter snappy
