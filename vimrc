@@ -110,6 +110,16 @@ nnoremap <C-j> <C-w><Down>
 nnoremap <C-h> <C-w><Left>
 nnoremap <C-l> <C-w><Right>
 
+" Disable arrow keys (so I learn to use hjkl)
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
