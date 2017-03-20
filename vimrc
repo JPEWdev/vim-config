@@ -51,6 +51,9 @@ set wildmode=longest:full,full  " On the first Tab, complete to the longest stri
 
 set encoding=utf8   " Display files as UTF-8
 
+set number
+set relativenumber
+
 set updatetime=500  " Update more frequently ms too keep git gutter snappy
 let g:gitgutter_sign_column_always = 1 " Always show sign column
 
@@ -123,6 +126,8 @@ inoremap <Right> <Nop>
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
+
+noremap <leader>n :set relativenumber!<CR>
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
