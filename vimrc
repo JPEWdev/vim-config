@@ -200,7 +200,7 @@ map <F12> :buffers<BAR>
 
 
 " Remove trailing whitespace on various files
-autocmd BufWritePre *.java,*.pl,*.pm,*.c,*.h,*.cpp,*.hpp,*.xml,*.fml,*.py,*.x,*.s,*.inc,*.sh,*.ini,*gdbinit,*.bb,*.bbappend,*.bbclass,*.conf,wscript,*.txt :call DelTrailSpace()
+autocmd BufWritePre *.java,*.pl,*.pm,*.c,*.h,*.cpp,*.hpp,*.xml,*.fml,*.py,*.x,*.s,*.inc,*.sh,*.ini,*gdbinit,*.bb,*.bbappend,*.bbclass,*.conf,wscript,*.txt,*.js :call DelTrailSpace()
 
 " Treat WAF wscript as a python file
 au BufNewFile,BufRead wscript* set filetype=python
@@ -217,7 +217,7 @@ function! CodeSpellCheck()
 endfunction
 
 set spell spelllang=en_us
-autocmd BufNewFile,BufRead *.java,*.pl,*.pm,*.c,*.h,*.cpp,*.hpp,*.xml,*.fml,*.py,*.x,*.s,*.inc,*.sh,*.ini,*gdbinit,*.bb,*.bbappend,*.bbclass,*.conf,wscript :call CodeSpellCheck()
+autocmd BufNewFile,BufRead *.java,*.pl,*.pm,*.c,*.h,*.cpp,*.hpp,*.xml,*.fml,*.py,*.x,*.s,*.inc,*.sh,*.ini,*gdbinit,*.bb,*.bbappend,*.bbclass,*.conf,wscript,*.js :call CodeSpellCheck()
 
 "-----------------------------------------------------------
 " Pressing F11 will processes the make.log file and display
