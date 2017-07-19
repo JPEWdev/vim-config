@@ -131,6 +131,9 @@ inoremap <C-U> <C-G>u<C-U>
 
 noremap <leader>n :set relativenumber!<CR>
 
+" leader t is a shortcut for :b#
+nnoremap <leader>t :b#<CR>
+
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
