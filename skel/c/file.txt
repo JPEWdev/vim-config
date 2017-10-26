@@ -1,13 +1,9 @@
-/*********************************************************************
-*
-*   MODULE NAME:
-*       [NAME] - %c
-*
-*   DESCRIPTION:
-*       [module description]
-*
-* Copyright [YEAR] by Garmin Ltd. or its subsidiaries.
-*********************************************************************/
+/**
+ * @file
+ * %c
+ *
+ * Copyright [YEAR] by Garmin Ltd. or its subsidiaries.
+ */
 
 /*--------------------------------------------------------------------
                            GENERAL INCLUDES
