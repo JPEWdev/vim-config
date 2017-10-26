@@ -111,10 +111,18 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
+" CTRL + hjkl to navigate splits
 nnoremap <C-k> <C-w><Up>
 nnoremap <C-j> <C-w><Down>
 nnoremap <C-h> <C-w><Left>
 nnoremap <C-l> <C-w><Right>
+
+" leader q to close buffer
+nnoremap <leader>q <Esc>:Kwbd<CR>
+
+" leader n/p for next/previous buffer
+nnoremap <leader>n <Esc>:bn<CR>
+nnoremap <leader>p <Esc>:bp<CR>
 
 " Disable arrow keys (so I learn to use hjkl)
 noremap <Up> <Nop>
@@ -130,7 +138,7 @@ inoremap <Right> <Nop>
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
-noremap <leader>n :set relativenumber!<CR>
+noremap <leader>l :set relativenumber!<CR>
 
 " leader t is a shortcut for :b#
 nnoremap <leader>t :b#<CR>
