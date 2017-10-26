@@ -17,10 +17,11 @@ else
 endif
 "set autowriteall
 
-if has('gui_running')
-    set background=dark
-    colorscheme solarized
+set background=dark
+if !has('gui_running')
+    set termguicolors
 endif
+colorscheme NeoSolarized
 
 set viminfo+=!      " Save CAPITOLIZED global variables
 

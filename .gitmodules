@@ -40,3 +40,6 @@
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer.git
+[submodule "bundle/NeoSolarized"]
+	path = bundle/NeoSolarized
+	url = https://github.com/icymind/NeoSolarized.git
