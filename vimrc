@@ -95,6 +95,10 @@ if has('gui_running')
   set guioptions-=m "remove menu bar
 endif
 
+if executable('rg')
+    let g:ackprg = 'rg --vimgrep'
+endif
+
 " <leader>a in normal mode searches for the word under the cursor
 nmap <expr> <leader>a GetFindAck('FindAck!', expand("<cword>"))
 
