@@ -43,3 +43,6 @@
 [submodule "bundle/NeoSolarized"]
 	path = bundle/NeoSolarized
 	url = https://github.com/icymind/NeoSolarized.git
+[submodule "bundle/fzf"]
+	path = bundle/fzf
+	url = https://github.com/junegunn/fzf.vim
