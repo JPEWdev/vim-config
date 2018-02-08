@@ -1,9 +1,6 @@
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -40,9 +37,9 @@
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer.git
-[submodule "bundle/NeoSolarized"]
-	path = bundle/NeoSolarized
-	url = https://github.com/icymind/NeoSolarized.git
 [submodule "bundle/fzf"]
 	path = bundle/fzf
 	url = https://github.com/junegunn/fzf.vim
+[submodule "bundle/vim-solarized"]
+	path = bundle/vim-solarized
+	url = https://github.com/ericbn/vim-solarized.git

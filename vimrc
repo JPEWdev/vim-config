@@ -21,7 +21,7 @@ set background=dark
 if !has('gui_running')
     set termguicolors
 endif
-colorscheme NeoSolarized
+colorscheme solarized
 
 set viminfo+=!      " Save CAPITOLIZED global variables
 
