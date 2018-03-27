@@ -23,6 +23,7 @@ Plugin 'JPEWdev/vim-linux-coding-style'
 Plugin 'ericbn/vim-solarized.git'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'rgarver/Kwbd.vim.git'
+Plugin 'mhinz/vim-grepper'
 
 call vundle#end()
 filetype plugin indent on
@@ -86,6 +87,13 @@ let g:airline_powerline_fonts = 1 " Use Powerline fonts
 let g:airline_theme = 'dark' " Use the default airline theme. I like it better than solarized
 let g:airline_detect_spell = 0 " Disable detection of spell status
 
+let g:grepper = {}
+let g:grepper.tools = ['rg', 'ack']
+let g:grepper.rg = {
+    \ 'grepprg':    'rg -H --ignore-file '.$HOME.'/.ignore --no-heading --vimgrep --no-ignore-vcs',
+    \ 'grepformat': '%f:%l:%c:%m',
+    \ 'escape':     '\^$.*+?()[]{}|'
+    \ }
 map <F3> <ESC>n
 imap <F3> <ESC>ni
 
@@ -120,7 +128,8 @@ if executable('rg')
 endif
 
 " <leader>a in normal mode searches for the word under the cursor
-nmap <expr> <leader>a GetFindAck('FindAck!', expand("<cword>"))
+nnoremap <leader>a :Grepper -cword<cr>
+nnoremap <leader>A :Grepper -cword -buffers<cr>
 
 "-----------------------------------------------------------
 " ALT + j/k will move lines up and down
