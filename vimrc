@@ -1,11 +1,31 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-
-let g:pathogen_disabled = ["vim-gitgutter"]
-execute pathogen#infect()
-
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+
+filetype off
+if has('win32') || has('win64')
+    exe ":set runtimepath+=" . $HOME . "/vimfiles/bundle/Vundle.vim"
+else
+    exe ":set runtimepath+=" . $HOME . "/.vim/bundle/Vundle.vim"
+endif
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'junegunn/fzf'
+Plugin 'scrooloose/nerdtree'
+Plugin 'MarcWeber/vim-addon-local-vimrc'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'JPEWdev/vim-bitbake'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'JPEWdev/vim-linux-coding-style'
+Plugin 'ericbn/vim-solarized.git'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'rgarver/Kwbd.vim.git'
+
+call vundle#end()
+filetype plugin indent on
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -58,7 +78,7 @@ set number
 set relativenumber
 
 set updatetime=500  " Update more frequently ms too keep git gutter snappy
-let g:gitgutter_sign_column_always = 1 " Always show sign column
+set signcolumn=yes  " Always show sign column
 
 set laststatus=2    "Always show status line
 let g:airline#extensions#tabline#enabled = 1 " Show buffer list in airline
