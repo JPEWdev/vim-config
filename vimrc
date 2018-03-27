@@ -244,4 +244,5 @@ map <F11> :cgetfile make.log<CR>:cw<CR>
 map <S-F11> :cfile make.log<CR>:cw<CR>
 
 let g:linuxsty_patterns = [ "/linux", "/kernel" ]
+let g:linuxsty_exclude_patterns = [ "/garmin/" ]
 
