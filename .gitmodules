@@ -21,7 +21,7 @@
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/vim-linux-coding-style"]
 	path = bundle/vim-linux-coding-style
-	url = https://github.com/vivien/vim-linux-coding-style.git
+	url = https://github.com/JPEWdev/vim-linux-coding-style.git
 [submodule "bundle/vim-addon-local-vimrc"]
 	path = bundle/vim-addon-local-vimrc
 	url = https://github.com/igrep/vim-addon-local-vimrc.git
@@ -33,7 +33,7 @@
 	url = https://github.com/easymotion/vim-easymotion.git
 [submodule "bundle/vim-bitbake"]
 	path = bundle/vim-bitbake
-	url = https://github.com/kergoth/vim-bitbake.git
+	url = https://github.com/JPEWdev/vim-bitbake.git
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer.git
