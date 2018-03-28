@@ -2,31 +2,25 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-filetype off
-if has('win32') || has('win64')
-    exe ":set runtimepath+=" . $HOME . "/vimfiles/bundle/Vundle.vim"
-else
-    exe ":set runtimepath+=" . $HOME . "/.vim/bundle/Vundle.vim"
-endif
-call vundle#begin()
+call plug#begin('~/.vim/bundle')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'junegunn/fzf'
-Plugin 'scrooloose/nerdtree'
-Plugin 'MarcWeber/vim-addon-local-vimrc'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'JPEWdev/vim-bitbake'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'JPEWdev/vim-linux-coding-style'
-Plugin 'ericbn/vim-solarized.git'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'rgarver/Kwbd.vim.git'
-Plugin 'mhinz/vim-grepper'
+Plug 'VundleVim/Vundle.vim'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'MarcWeber/vim-addon-local-vimrc'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'JPEWdev/vim-bitbake'
+Plug 'easymotion/vim-easymotion'
+Plug 'JPEWdev/vim-linux-coding-style'
+Plug 'ericbn/vim-solarized'
+Plug 'airblade/vim-gitgutter'
+Plug 'rgarver/Kwbd.vim'
+Plug 'mhinz/vim-grepper'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
