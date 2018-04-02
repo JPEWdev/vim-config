@@ -18,7 +18,7 @@ Plug 'JPEWdev/vim-linux-coding-style'
 Plug 'ericbn/vim-solarized'
 Plug 'airblade/vim-gitgutter'
 Plug 'rgarver/Kwbd.vim'
-Plug 'mhinz/vim-grepper'
+Plug 'eugen0329/vim-esearch'
 
 call plug#end()
 
@@ -81,15 +81,22 @@ let g:airline_powerline_fonts = 1 " Use Powerline fonts
 let g:airline_theme = 'dark' " Use the default airline theme. I like it better than solarized
 let g:airline_detect_spell = 0 " Disable detection of spell status
 
-let g:grepper = {}
-let g:grepper.tools = ['rg', 'ack']
-let g:grepper.rg = {
-    \ 'grepprg':    'rg -H --ignore-file '.$HOME.'/.ignore --no-heading --vimgrep --no-ignore-vcs',
-    \ 'grepformat': '%f:%l:%c:%m',
-    \ 'escape':     '\^$.*+?()[]{}|'
-    \ }
 map <F3> <ESC>n
 imap <F3> <ESC>ni
+
+let g:esearch = {
+      \ 'adapter':    'rg',
+      \ 'backend':    'vim8',
+      \ 'out':        'win',
+      \ 'batch_size': 1000,
+      \ 'wordchars': '@,48-57,_,192-255',
+      \ 'use':        ['visual', 'hlsearch', 'last'],
+      \}
+
+let g:esearch#out#win#open = 'enew'
+let g:esearch#adapter#rg#options = "--no-ignore-vcs --ignore-file ".$HOME."/.ignore"
+let g:esearch#out#win#buflisted = 1
+let g:esearch#util#trunc_omission = "|"
 
 "-----------------------------------------------------------
 " Navigation Commands:
@@ -122,8 +129,7 @@ if executable('rg')
 endif
 
 " <leader>a in normal mode searches for the word under the cursor
-nnoremap <leader>a :Grepper -cword<cr>
-nnoremap <leader>A :Grepper -cword -buffers<cr>
+call esearch#map('<leader>a', 'esearch-word-under-cursor')
 
 "-----------------------------------------------------------
 " ALT + j/k will move lines up and down
@@ -146,6 +152,7 @@ nnoremap <C-l> <C-w><Right>
 
 " leader q to close buffer
 nnoremap <leader>q <Esc>:Kwbd<CR>
+nnoremap <leader>c <Esc>:close<CR>
 
 " leader n/p for next/previous buffer
 nnoremap <leader>n <Esc>:bn<CR>
