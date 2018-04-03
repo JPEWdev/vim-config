@@ -19,6 +19,7 @@ Plug 'ericbn/vim-solarized'
 Plug 'airblade/vim-gitgutter'
 Plug 'rgarver/Kwbd.vim'
 Plug 'eugen0329/vim-esearch'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
