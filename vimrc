@@ -4,7 +4,6 @@ set nocompatible
 
 call plug#begin('~/.vim/bundle')
 
-Plug 'VundleVim/Vundle.vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -20,6 +19,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'rgarver/Kwbd.vim'
 Plug 'eugen0329/vim-esearch'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-markdown'
+Plug 'igankevich/mesonic'
+Plug 'tpope/vim-fugitive'
+Plug 'stephpy/vim-yaml'
 
 call plug#end()
 
@@ -247,7 +250,7 @@ map <F12> :buffers<BAR>
 
 
 " Remove trailing whitespace on various files
-autocmd BufWritePre *.java,*.pl,*.pm,*.c,*.h,*.cpp,*.hpp,*.xml,*.fml,*.py,*.x,*.s,*.inc,*.sh,*.ini,*gdbinit,*.bb,*.bbappend,*.bbclass,*.conf,wscript,*.txt,*.js,meson.build :call DelTrailSpace()
+autocmd BufWritePre *.java,*.pl,*.pm,*.c,*.h,*.cpp,*.hpp,*.xml,*.fml,*.py,*.x,*.s,*.inc,*.sh,*.ini,*gdbinit,*.bb,*.bbappend,*.bbclass,*.conf,wscript,*.txt,*.js,meson.build,*.yaml :call DelTrailSpace()
 
 " Treat WAF wscript as a python file
 au BufNewFile,BufRead wscript* set filetype=python
@@ -264,7 +267,7 @@ function! CodeSpellCheck()
 endfunction
 
 set spell spelllang=en_us
-autocmd BufNewFile,BufRead *.java,*.pl,*.pm,*.c,*.h,*.cpp,*.hpp,*.xml,*.fml,*.py,*.x,*.s,*.inc,*.sh,*.ini,*gdbinit,*.bb,*.bbappend,*.bbclass,*.conf,wscript,*.js :call CodeSpellCheck()
+autocmd BufNewFile,BufRead *.java,*.pl,*.pm,*.c,*.h,*.cpp,*.hpp,*.xml,*.fml,*.py,*.x,*.s,*.inc,*.sh,*.ini,*gdbinit,*.bb,*.bbappend,*.bbclass,*.conf,wscript,*.js,meson.build,*.yaml :call CodeSpellCheck()
 
 "-----------------------------------------------------------
 " Pressing F11 will processes the make.log file and display
