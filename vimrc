@@ -247,14 +247,6 @@ map <F12> :buffers<BAR>
            \let i = input("Buffer number: ")<BAR>
            \execute "buffer " . i<CR>
 
-
-
-" Remove trailing whitespace on various files
-autocmd BufWritePre *.java,*.pl,*.pm,*.c,*.h,*.cpp,*.hpp,*.xml,*.fml,*.py,*.x,*.s,*.inc,*.sh,*.ini,*gdbinit,*.bb,*.bbappend,*.bbclass,*.conf,wscript,*.txt,*.js,meson.build,*.yaml :call DelTrailSpace()
-
-" Treat WAF wscript as a python file
-au BufNewFile,BufRead wscript* set filetype=python
-
 " Enable spellcheck
 function! CodeSpellCheck()
     exe ":syntax spell toplevel"
@@ -266,8 +258,50 @@ function! CodeSpellCheck()
     exe ":setlocal spelllang=" . &spelllang . ",code"
 endfunction
 
+let g:code_files = [
+            \ '*.bb',
+            \ '*.bbappend',
+            \ '*.bbclass',
+            \ '*.c',
+            \ '*.conf',
+            \ '*.cpp',
+            \ '*.fml',
+            \ '*.h',
+            \ '*.hpp',
+            \ '*.inc',
+            \ '*.ini',
+            \ '*.java',
+            \ '*.js',
+            \ '*.pl',
+            \ '*.pm',
+            \ '*.py',
+            \ '*.rules',
+            \ '*.s',
+            \ '*.sh',
+            \ '*.txt',
+            \ '*.x',
+            \ '*.xml',
+            \ '*.yaml',
+            \ '*.yml',
+            \ '*gdbinit',
+            \ 'meson.build',
+            \ 'wscript*',
+            \ ]
+
 set spell spelllang=en_us
-autocmd BufNewFile,BufRead *.java,*.pl,*.pm,*.c,*.h,*.cpp,*.hpp,*.xml,*.fml,*.py,*.x,*.s,*.inc,*.sh,*.ini,*gdbinit,*.bb,*.bbappend,*.bbclass,*.conf,wscript,*.js,meson.build,*.yaml :call CodeSpellCheck()
+augroup code_files
+    autocmd!
+    " Treat WAF wscript as a python file
+    autocmd BufNewFile,BufRead wscript* set filetype=python
+
+    " Udev rules
+    autocmd BufNewFile,BufRead *.rules set filetype=udevrules
+
+    exe ":autocmd BufNewFile,BufRead " . join(g:code_files, ',') . " :call CodeSpellCheck()"
+
+    " Remove trailing whitespace on various files
+    exe ":autocmd BufWritePre " . join(g:code_files, ',') . " :call DelTrailSpace()"
+augroup END
 
 "-----------------------------------------------------------
 " Pressing F11 will processes the make.log file and display
