@@ -165,6 +165,8 @@ nnoremap <leader>p <Esc>:bp<CR>
 " leader f to search for filename under cursor using fzf
 nnoremap <leader>f <Esc>:call fzf#vim#files('', {'options':'--query='.fzf#shellescape(expand('<cfile>:t'))})<CR>
 
+nnoremap <leader>o <Esc>:exec "e " . expand('%:p:h')<CR>
+
 " Disable arrow keys (so I learn to use hjkl)
 noremap <Up> <Nop>
 noremap <Down> <Nop>
