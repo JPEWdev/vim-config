@@ -274,6 +274,8 @@ let g:code_files = [
             \ '*.ini',
             \ '*.java',
             \ '*.js',
+            \ '*.json',
+            \ '*.md',
             \ '*.pl',
             \ '*.pm',
             \ '*.py',
