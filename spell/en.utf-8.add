@@ -10,3 +10,5 @@ executables
 dereference
 dereferencing
 symlinks
+cryptographic
+checksum
