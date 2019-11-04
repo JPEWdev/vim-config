@@ -12,3 +12,6 @@ dereferencing
 symlinks
 cryptographic
 checksum
+reproducibility
+initializer
+assignee
