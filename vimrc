@@ -23,6 +23,7 @@ Plug 'tpope/vim-markdown'
 Plug 'igankevich/mesonic'
 Plug 'tpope/vim-fugitive'
 Plug 'stephpy/vim-yaml'
+Plug 'rhysd/vim-clang-format'
 
 call plug#end()
 
@@ -166,6 +167,8 @@ nnoremap <leader>p <Esc>:bp<CR>
 nnoremap <leader>f <Esc>:call fzf#vim#files('', {'options':'--query='.fzf#shellescape(expand('<cfile>:t'))})<CR>
 
 nnoremap <leader>o <Esc>:exec "e " . expand('%:p:h')<CR>
+
+nnoremap <leader>I <Esc>:ClangFormat<CR>
 
 " Disable arrow keys (so I learn to use hjkl)
 noremap <Up> <Nop>
