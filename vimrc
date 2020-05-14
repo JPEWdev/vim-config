@@ -114,12 +114,6 @@ map <C-S-Tab> <Esc>:bp<CR>
 map <C-F4> <Esc><Plug>Kwbd
 
 if has('gui_running')
-  if has('win32') || has('win64')
-    set guifont=Hack:h9
-  else
-    set guifont=Hack\ 9
-  endif
-
   " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
   let &guioptions = substitute(&guioptions, "t", "", "g")
 
