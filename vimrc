@@ -11,7 +11,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'JPEWdev/vim-bitbake'
+Plug 'git://git.openembedded.org/bitbake', { 'rtp': 'contrib/vim' }
 Plug 'easymotion/vim-easymotion'
 Plug 'JPEWdev/vim-linux-coding-style'
 Plug 'ericbn/vim-solarized'
