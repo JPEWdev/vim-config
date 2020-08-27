@@ -1,8 +1,8 @@
 /**
- *  \file
+ * @file
  *
- *  %c
+ * %c
  *
- *  \Copyright [YEAR] by Garmin Ltd. or its subsidiaries.
+ * Copyright [YEAR] by Garmin Ltd. or its subsidiaries.
  */
 
