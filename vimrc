@@ -24,6 +24,7 @@ Plug 'igankevich/mesonic'
 Plug 'tpope/vim-fugitive'
 Plug 'stephpy/vim-yaml'
 Plug 'rhysd/vim-clang-format'
+Plug 'psf/black', { 'branch': 'stable' }
 
 call plug#end()
 
@@ -163,6 +164,7 @@ nnoremap <leader>f <Esc>:call fzf#vim#files('', {'options':'--query='.fzf#shelle
 nnoremap <leader>o <Esc>:exec "e " . expand('%:p:h')<CR>
 
 nnoremap <leader>I <Esc>:ClangFormat<CR>
+autocmd FileType python nnoremap <leader>I <Esc>:Black<CR>
 
 " Disable arrow keys (so I learn to use hjkl)
 noremap <Up> <Nop>
