@@ -100,7 +100,6 @@ let g:esearch = {
       \}
 
 let g:esearch#out#win#open = 'enew'
-let g:esearch#adapter#rg#options = "--no-ignore-vcs --ignore-file ".$HOME."/.ignore --ignore-file ".$HOME."/.ignore.local"
 let g:esearch#out#win#buflisted = 1
 let g:esearch#util#trunc_omission = "|"
 
