@@ -25,6 +25,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'stephpy/vim-yaml'
 Plug 'rhysd/vim-clang-format'
 Plug 'psf/black', { 'branch': 'stable' }
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -167,6 +168,8 @@ function! CodeFormat()
         exec ":Black"
     elseif &filetype ==? "c" || &filetype ==? "cpp"
         exec ":ClangFormat"
+    elseif &filetype ==? "rust"
+        exec ":RustFmt"
     endif
 endfunction
 nnoremap <leader>I <Esc>:call CodeFormat()<CR>
