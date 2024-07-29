@@ -204,6 +204,12 @@ if has('mouse')
   set mouse=a
 endif
 
+" Disable Background Color Erase (BCE) so that color schemes
+" render properly when inside 256-color tmux and GNU screen.
+if &term =~ '256color'
+    set t_ut=
+endif
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
