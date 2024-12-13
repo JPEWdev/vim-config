@@ -5,7 +5,7 @@ set nocompatible
 call plug#begin('~/.vim/bundle')
 
 Plug 'jlanzarotta/bufexplorer'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'MarcWeber/vim-addon-local-vimrc'
