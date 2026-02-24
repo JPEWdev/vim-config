@@ -26,6 +26,7 @@ Plug 'stephpy/vim-yaml'
 Plug 'rhysd/vim-clang-format'
 Plug 'psf/black', { 'branch': 'stable' }
 Plug 'rust-lang/rust.vim'
+Plug 'github/copilot.vim'
 
 call plug#end()
 
@@ -343,3 +344,9 @@ map <S-F11> :cfile make.log<CR>:cw<CR>
 let g:linuxsty_patterns = [ "/linux", "/kernel" ]
 let g:linuxsty_exclude_patterns = [ "/garmin/" ]
 
+imap <silent><script><expr> <TAB> copilot#Accept("\<TAB>")
+imap <silent><script><expr> <S-TAB> copilot#Accept("\<S-TAB>")
+imap <C-l> <Plug>(copilot-accept-word)
+imap <C-k> <Plug>(copilot-next)
+imap <C-j> <Plug>(copilot-previous)
+let g:copilot_no_tab_map = v:true
