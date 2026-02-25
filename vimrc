@@ -350,3 +350,9 @@ imap <C-l> <Plug>(copilot-accept-word)
 imap <C-k> <Plug>(copilot-next)
 imap <C-j> <Plug>(copilot-previous)
 let g:copilot_no_tab_map = v:true
+
+try
+    source ~/.vimrc.local
+catch
+    " Ignore
+endtry
