@@ -344,12 +344,16 @@ map <S-F11> :cfile make.log<CR>:cw<CR>
 let g:linuxsty_patterns = [ "/linux", "/kernel" ]
 let g:linuxsty_exclude_patterns = [ "/garmin/" ]
 
-imap <silent><script><expr> <TAB> copilot#Accept("\<TAB>")
+imap <silent><script><expr> <TAB> copilot#AcceptLine("\<TAB>")
 imap <silent><script><expr> <S-TAB> copilot#Accept("\<S-TAB>")
 imap <C-l> <Plug>(copilot-accept-word)
 imap <C-k> <Plug>(copilot-next)
 imap <C-j> <Plug>(copilot-previous)
+imap <C-@> <Plug>(copilot-suggest)
+imap <C-space> <Plug>(copilot-suggest)
+
 let g:copilot_no_tab_map = v:true
+let g:copilot_idle_delay = 2000
 
 try
     source ~/.vimrc.local
